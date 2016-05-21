@@ -59,7 +59,6 @@ if(keyboard_check(vk_f1) &amp;&amp; keyboard_check_pressed(ord("F"))) {
 } 
 
 if(keyboard_check(vk_f1) &amp;&amp; keyboard_check_pressed(ord("S"))) {
-    show_message(string(date_current_datetime()));
     screen_save("Screenshot " + string(current_day) + "-" + string(current_month) + "-" + string(current_year) + "-" + string(current_minute) + "-" + string(current_second) + ".png");
 } 
 

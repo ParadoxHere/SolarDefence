@@ -44,7 +44,31 @@ cost = 25;
 selected = false;
 name = "Null";
 desc = "";
+
+cooldown = room_speed;
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -69,7 +93,7 @@ desc = "";
             <string>// if not dragging anything
 if(!global.dragging) {
     // If you have enough money buy
-    if(global.money &gt;= cost) {
+    if(global.money &gt;= cost) { 
         // Takes away money
         global.money -= cost;
          
@@ -143,7 +167,8 @@ if(global.Health &gt; 0) {
     }
     
     // If click create tower
-    if(pressed) {  
+    if(pressed &amp;&amp; alarm[1] == -1) {  
+            alarm[1] = cooldown;
             // Double check to see if nothing is being dragged
             if(global.dragging == false) {
                 global.selectedTower = noone;

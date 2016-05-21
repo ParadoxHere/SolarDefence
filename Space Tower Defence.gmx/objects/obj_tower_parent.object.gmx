@@ -147,8 +147,10 @@ attack = sLevel;
 if(drag) {
     x = ((mouse_x div sprite_width) * sprite_width) + (sprite_width / 2);
     y = ((mouse_y div sprite_height) * sprite_height) + (sprite_height / 2); 
+    mask_index = spr_dragging_mask;
 } else {
     platform_collision();
+    mask_index = sprite_index;
 }
 
 if(global.Health &lt;= 0) {
@@ -191,6 +193,22 @@ if(global.selectedTower == id) {
             <string>if(!position_meeting(mouse_x, mouse_y, global.selectedTower) &amp;&amp; !position_meeting(mouse_x, mouse_y, obj_button_parent)) {
     global.selectedTower = noone;
 }
+
+// If not toching a solid
+if(drag &amp;&amp; global.dragging) {
+    if(!place_meeting(x, y, obj_solid)) {
+        // Place tower
+        drag = false;
+        global.dragging = false;  
+    } else {
+        // Else if dragging someone
+        if(global.dragging) {
+            // Play sound
+            audio_emitter_pitch(global.audio_em, random_range(.8, 1.2));
+            audio_play_sound_on(global.audio_em, snd_button_deny, false, 10);
+        }
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -225,21 +243,6 @@ if(place_meeting(x, y + 32, obj_solid)) {
     }
 }
 
-// If not toching a solid
-if(drag &amp;&amp; global.dragging) {
-    if(!place_meeting(x, y, obj_solid)) {
-        // Place tower
-        drag = false;
-        global.dragging = false;  
-    } else {
-        // Else if dragging someone
-        if(global.dragging) {
-            // Play sound
-            audio_emitter_pitch(global.audio_em, random_range(.8, 1.2));
-            audio_play_sound_on(global.audio_em, snd_button_deny, false, 10);
-        }
-    }
-}
 </string>
           </argument>
         </arguments>

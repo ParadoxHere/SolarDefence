@@ -72,6 +72,7 @@
       </sprites>
       <sprite>sprites\spr_floor</sprite>
       <sprite>sprites\spr_tower_damage</sprite>
+      <sprite>sprites\spr_dragging_mask</sprite>
     </sprites>
     <sprites name="Asteroid">
       <sprite>sprites\spr_boss_asteroid</sprite>
