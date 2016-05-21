@@ -50,7 +50,7 @@ for(var i = 0; i &lt; button_count; i++) {
 maxHp = 3;
 hp = maxHp;
 
-maxLevel = 2;
+maxLevel = 10;
 level = 0;
 sLevel = 1;
 
@@ -325,6 +325,8 @@ if(drag &amp;&amp; global.dragging) {
     draw_text(x - 46, y - (42 + lineLength) + (textPadding * index), "LVL: " + string(sLevel));
     index++;
     draw_text(x - 46, y - (42 + lineLength) + (textPadding * index), "Sell For: $" + string(sellFor));
+    index++;
+    draw_text(x - 46, y - (42 + lineLength) + (textPadding * index), "Upgrade Cost: $" + string(upgradeCost));
     index++;
     
 } else {

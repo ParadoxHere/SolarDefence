@@ -40,7 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>x = ((x div 32) * 32) + 16;
-shootSpeed = random(room_speed * 1) / global.difficulty;
+shootSpeed = random(room_speed * 2) / global.difficulty;
 hp = 3;
 spd = 3;
 alarm[0] = shootSpeed;
