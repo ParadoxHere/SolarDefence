@@ -342,20 +342,27 @@ draw_set_defaults();
 
 
 image_index = level;
+
+
 if(!drag) {
-    draw_sprite(sprite_index, image_index, x, y - 1);
+    draw_sprite(sprite_index, image_index, x, y);
 } else {
     draw_self();
 }
-if(sLevel == 1) {
-    draw_sprite(spr_tower_damage, round(hp - 1), x, y);
-} else if(sLevel &gt; 1) { 
-    if(hp &lt;= maxHp - ((maxHp / 3) * 2)) { 
-        draw_sprite(spr_tower_damage, 1, x, y);
-    } else if(hp &lt;= maxHp - (maxHp / 3)) { 
-        draw_sprite(spr_tower_damage, 0, x, y);
-    }
+
+var index = 0;
+
+if(hp &lt;= (maxHp / 3) * 2) { 
+    index = 1;
+} 
+
+if(hp &lt;= (maxHp / 3)) { 
+    index = 2;
 }
+
+draw_sprite(spr_tower_damage, index, x, y);
+
+
 </string>
           </argument>
         </arguments>

@@ -90,11 +90,33 @@ a.y = bottomLimit;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-draw_text(x, y, string(a.percentage) + "%");
-draw_set_defaults();
+            <string>sellFor = sellFor1 * sLevel;
+attack = sLevel;
+
+if(drag) {
+    x = ((mouse_x div sprite_width) * sprite_width) + (sprite_width / 2);
+    y = ((mouse_y div sprite_height) * sprite_height) + (sprite_height / 2); 
+    mask_index = spr_dragging_mask;
+} else {
+    platform_collision();
+    mask_index = sprite_index;
+}
+
+if(global.Health &lt;= 0) {
+    instance_destroy();
+}
+
+if(instance_exists(obj_enemy)) {
+    if(alarm[0] == -1) {
+        alarm[0] = shootSpeed;
+    }
+}
+
+if(global.selectedTower == id) {
+    if((x != xprevious) || (y != yprevious)) {
+        global.selectedTower = noone;
+    }
+}
 </string>
           </argument>
         </arguments>
