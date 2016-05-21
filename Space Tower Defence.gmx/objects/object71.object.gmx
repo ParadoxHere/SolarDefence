@@ -31,7 +31,7 @@ hover = button_hover();
 
 if(pressed) {
     gameInit();
-    global.room_level = room_moon;
+    global.room_level = room_mars;
     fade(rm_choose_room);
 }
 </string>

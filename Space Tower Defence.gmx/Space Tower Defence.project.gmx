@@ -109,6 +109,7 @@
   <backgrounds name="background">
     <backgrounds name="Mars">
       <background>background\bg_mars_Atmos</background>
+      <background>background\bg_mars_floor</background>
     </backgrounds>
     <backgrounds name="Splash">
       <background>background\bg_splash</background>
@@ -182,6 +183,10 @@
       <script>scripts\gj_scores_get.gml</script>
       <script>scripts\gj_user_info_fromuserid.gml</script>
     </scripts>
+    <scripts name="Room">
+      <script>scripts\room_moon.gml</script>
+      <script>scripts\room_mars.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <fonts name="GUI Font">
@@ -210,10 +215,11 @@
           <object>objects\obj_options</object>
           <object>objects\obj_exit</object>
         </objects>
-        <object>objects\obj_moon_defence</object>
         <objects name="Level Select">
           <object>objects\obj_moon_select</object>
+          <object>objects\object71</object>
         </objects>
+        <object>objects\obj_moon_defence</object>
       </objects>
       <objects name="Pause Menu">
         <object>objects\obj_pause</object>
@@ -347,7 +353,6 @@
     <rooms name="Play">
       <room>rooms\rm_play</room>
       <room>rooms\rm_choose_room</room>
-      <room>rooms\rm_mars</room>
       <room>rooms\rm_choose_level</room>
     </rooms>
   </rooms>

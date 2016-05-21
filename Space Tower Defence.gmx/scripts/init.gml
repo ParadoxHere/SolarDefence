@@ -32,5 +32,7 @@ global.effectVolume = .5;
 global.intensity = 0;
 global.pause = false;
 global.background_speed = -.2;
+global.room_level = room_moon;
+global.level_floor = bg_moon_floor;
 
 room_goto_next();

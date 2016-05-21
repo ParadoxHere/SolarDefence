@@ -14,6 +14,8 @@
 
 background_hspeed[0] = global.background_speed ;
 
+script_execute(global.room_level);
+
 // Test</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
@@ -37,7 +39,7 @@ background_hspeed[0] = global.background_speed ;
   <backgrounds>
     <background visible="-1" foreground="0" name="bg_space" x="0" y="0" htiled="-1" vtiled="-1" hspeed="-2" vspeed="1" stretch="0"/>
     <background visible="-1" foreground="-1" name="bg_overlay" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="0" foreground="0" name="bg_moon" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="0" foreground="0" name="bg_mars_Atmos" x="0" y="0" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -69,7 +71,6 @@ background_hspeed[0] = global.background_speed ;
     <instance objName="obj_inv_solid" x="0" y="0" name="inst_3469A186" locked="0" code="" scaleX="1" scaleY="13" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="0" y="416" name="inst_C9777E3B" locked="0" code="" scaleX="20" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_healer_button" x="608" y="192" name="inst_56DDD9CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_space_ship" x="352" y="-64" name="inst_D366E825" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tower_parent" x="320" y="384" name="inst_B537DAC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
