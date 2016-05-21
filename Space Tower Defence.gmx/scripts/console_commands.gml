@@ -77,4 +77,3 @@ if(command_type == "health_set") {
 }
 
 return 0;
-
