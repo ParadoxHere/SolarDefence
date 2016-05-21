@@ -52,11 +52,16 @@ show = false;
             <kind>1</kind>
             <string>if(keyboard_check(vk_f1) &amp;&amp; keyboard_check_pressed(ord("C"))) {
     show = !show;
-}
+} 
 
 if(keyboard_check(vk_f1) &amp;&amp; keyboard_check_pressed(ord("F"))) {
     global.show_fps = !global.show_fps;
-}
+} 
+
+if(keyboard_check(vk_f1) &amp;&amp; keyboard_check_pressed(ord("S"))) {
+    show_message(string(date_current_datetime()));
+    screen_save("Screenshot " + string(current_day) + "-" + string(current_month) + "-" + string(current_year) + "-" + string(current_minute) + "-" + string(current_second) + ".png");
+} 
 
 if(show) {
     txt = keyboard_string;
