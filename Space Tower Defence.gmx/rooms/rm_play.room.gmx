@@ -69,6 +69,8 @@ background_hspeed[0] = global.background_speed ;
     <instance objName="obj_inv_solid" x="0" y="0" name="inst_3469A186" locked="0" code="" scaleX="1" scaleY="13" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="0" y="416" name="inst_C9777E3B" locked="0" code="" scaleX="20" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_healer_button" x="608" y="192" name="inst_56DDD9CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_space_ship" x="352" y="-64" name="inst_D366E825" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tower_parent" x="320" y="384" name="inst_B537DAC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
