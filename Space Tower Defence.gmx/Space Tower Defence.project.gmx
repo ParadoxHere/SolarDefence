@@ -344,7 +344,7 @@
         <object>objects\obj_enemy</object>
       </objects>
       <objects name="Debug">
-        <object>objects\obj_console</object>
+        <object>objects\obj_debug</object>
       </objects>
     </objects>
   </objects>

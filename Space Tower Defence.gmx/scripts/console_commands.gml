@@ -23,7 +23,7 @@ if(command_type == "money_set") {
 
 if(command_type == "wave_add") {
     global.wave += real(command_argument[0]);
-    global.startwave = false;
+    global.startwave = true;
     with(obj_asteroid_controll) {
         waveAsteroids = wantedWaveAsteroids;
     }
@@ -32,7 +32,7 @@ if(command_type == "wave_add") {
 
 if(command_type == "wave_take") {
     global.wave -= real(command_argument[0]);
-    global.startwave = false;
+    global.startwave = true;
     with(obj_asteroid_controll) {
         waveAsteroids = wantedWaveAsteroids;
     }
@@ -41,7 +41,7 @@ if(command_type == "wave_take") {
 
 if(command_type == "wave_set") {
     global.wave = real(command_argument[0]);
-    global.startwave = false;
+    global.startwave = true;
     with(obj_asteroid_controll) {
         waveAsteroids = wantedWaveAsteroids;
     }

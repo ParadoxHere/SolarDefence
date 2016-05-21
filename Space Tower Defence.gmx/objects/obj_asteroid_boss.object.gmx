@@ -42,7 +42,7 @@
             <string>instance_create(x, y, obj_bossbattle_manager);
 spd = .25;
 global.bossStarted = false;
-maxHp = 500 * (global.wave / 5) * global.difficulty;
+maxHp = 200 * (global.wave / 5) * global.difficulty;
 hp = maxHp;
 global.bossHealth = get_percent(hp, maxHp);
 </string>
@@ -86,14 +86,10 @@ global.money += 500;
 indicate(500, "+$");
 global.bossStarted = false;
 shakeScreen(10);
-instance_create(x, y, obj_asteroid);
-instance_create(x, y, obj_asteroid);
-instance_create(x, y, obj_asteroid);
-instance_create(x, y, obj_asteroid);
-instance_create(x, y, obj_asteroid);
-instance_create(x, y, obj_asteroid);
-instance_create(x, y, obj_asteroid);
-instance_create(x, y, obj_asteroid);
+repeat(8) {
+    instance_create(x, y, obj_asteroid);
+}
+
 
 
 </string>
@@ -119,6 +115,7 @@ instance_create(x, y, obj_asteroid);
           <argument>
             <kind>1</kind>
             <string>global.bossHealth = get_percent(hp, maxHp);
+
 if(global.bossStarted) {
     y += spd;
 }

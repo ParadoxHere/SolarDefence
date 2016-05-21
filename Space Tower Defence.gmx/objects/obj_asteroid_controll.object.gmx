@@ -30,7 +30,7 @@
     wantedWaveAsteroids = global.wave * 2 * global.difficulty;
     waveAsteroids = 0;
     
-    spawnRate = random_range(60, 60 * 3) / global.difficulty;
+    spawnRate = random_range(room_speed, room_speed * 3) / global.difficulty;
     waitNextWave = 120;
     
     global.startwave = true;

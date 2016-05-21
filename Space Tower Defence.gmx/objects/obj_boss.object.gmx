@@ -72,8 +72,7 @@ aim_y = y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-hp -= other.damage;
+            <string>hp -= other.damage;
 indicate(other.damage, "-");
 
 with(other) {

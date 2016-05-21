@@ -34,5 +34,6 @@ global.pause = false;
 global.background_speed = -.2;
 global.room_level = room_moon;
 global.level_floor = bg_moon_floor;
+global.show_fps = false;
 
 room_goto_next();

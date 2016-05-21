@@ -26,6 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>padding = 16;
+
+gui_list[0] = "Money: $" + string(global.money);
+gui_list[1] = "Health: " + string(get_percent(global.Health, global.maxHealth)) + "%";
+gui_list[2] = "Wave: " + string(global.wave);
+gui_list[3] = "Score: " + string(global.Score);
+gui_list[4] = "Difficulty";
+gui_list[5] = "Boss Health";
+gui_list[6] = "FPS";
+
+index = 0;
 </string>
           </argument>
         </arguments>
@@ -50,25 +60,49 @@
             <kind>1</kind>
             <string>draw_set_colour(c_white);
 draw_set_font(fnt_gui_12);
-draw_text(view_xview + padding, view_yview + padding * 1, "Money: $" + string(global.money));
-draw_text(view_xview + padding, view_yview + padding * 2, "Health: " + string(get_percent(global.Health, global.maxHealth)) + "%");
-draw_text(view_xview + padding, view_yview + padding * 3, "Wave: " + string(global.wave));
-draw_text(view_xview + padding, view_yview + padding * 4, "Score: " + string(global.Score));
-if(global.difficulty == 1) {
-    draw_text(view_xview + padding, view_yview + padding * 5.1, "Difficulty: Easy");
-} else if(global.difficulty == 2) {
-    draw_text(view_xview + padding, view_yview + padding * 5.1, "Difficulty: Medium");
-} else if(global.difficulty == 3) {
-    draw_text(view_xview + padding, view_yview + padding * 5.1, "Difficulty: Hard");
-} else {
-    draw_text(view_xview + padding, view_yview + padding * 5.1, "Difficulty: UN-DEFINED");
-}   
+
+gui_list[0] = "Money: $" + string(global.money);
+gui_list[1] = "Health: " + string(get_percent(global.Health, global.maxHealth)) + "%";
+gui_list[2] = "Wave: " + string(global.wave);
+gui_list[3] = "Score: " + string(global.Score);
+
+switch(global.difficulty) {
+    case 1:
+    gui_list[4] = "Difficulty: Easy";
+    break;
+    
+    case 2:
+    gui_list[4] =  "Difficulty: Medium";
+    break;
+    
+    case 3:
+    gui_list[4] = "Difficulty: Hard";
+    break;
+    
+    default:
+    gui_list[4] = "Difficulty: UN-DEFINED";
+    break;
+}
 
 if(instance_exists(obj_boss)) {
-    draw_text(view_xview + padding, view_yview + padding * 6.1, "Boss Health: " + string(global.bossHealth) + "%");
+    gui_list[5] = "Boss Health: " + string(global.bossHealth) + "%";
 } else {
-    draw_text(view_xview + padding, view_yview + padding * 6.1, "Boss Health: -%");   
+    gui_list[5] = "";
 }
+
+if(global.show_fps) {
+    gui_list[6] = "FPS: " + string(fps);
+} else {
+    gui_list[6] = "";
+}
+
+for(var i = 0; i &lt; array_length_1d(gui_list); i++) {
+    if(gui_list[i] != "") {
+        index++;
+    }
+    draw_text(view_xview + padding, view_yview + padding * (index + 1), gui_list[i]); 
+}
+index = 0;
 
 draw_set_defaults();
 </string>
