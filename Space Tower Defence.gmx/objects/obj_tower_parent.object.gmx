@@ -40,7 +40,7 @@ button_object[2] = obj_tower_health;
 button_object[3] = obj_tower_upgrade;
 button_object_created = false;
 button_count = array_length_1d(button_object);
-button_section_size = 360 / button_count;
+button_section_size = 90 / button_count;
 
 for(var i = 0; i &lt; button_count; i++) {
     button[i] = noone;
