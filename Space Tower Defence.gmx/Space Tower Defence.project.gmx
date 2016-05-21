@@ -187,6 +187,10 @@
       <script>scripts\room_moon.gml</script>
       <script>scripts\room_mars.gml</script>
     </scripts>
+    <scripts name="Console">
+      <script>scripts\console_check_command.gml</script>
+      <script>scripts\console_commands.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <fonts name="GUI Font">
@@ -338,6 +342,9 @@
           <object>objects\obj_space_ship_bullet</object>
         </objects>
         <object>objects\obj_enemy</object>
+      </objects>
+      <objects name="Debug">
+        <object>objects\obj_console</object>
       </objects>
     </objects>
   </objects>
