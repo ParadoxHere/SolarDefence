@@ -37,24 +37,20 @@
     <sprites name="Towers">
       <sprites name="Default">
         <sprite>sprites\spr_default_tower_big</sprite>
-        <sprite>sprites\spr_default_tower</sprite>
         <sprite>sprites\spr_tower1_button</sprite>
         <sprite>sprites\spr_bullet</sprite>
       </sprites>
       <sprites name="Proj Follow">
         <sprite>sprites\spr_proj_follow_tower_big</sprite>
-        <sprite>sprites\spr_proj_follow_tower</sprite>
         <sprite>sprites\spr_proj_follow_button</sprite>
         <sprite>sprites\spr_blue_bullet</sprite>
       </sprites>
       <sprites name="Money Maker">
         <sprite>sprites\spr_money_maker_button</sprite>
         <sprite>sprites\spr_money_maker_tower_big</sprite>
-        <sprite>sprites\spr_money_maker_tower</sprite>
       </sprites>
       <sprites name="Defence">
         <sprite>sprites\spr_defence_tower_big</sprite>
-        <sprite>sprites\spr_defence_tower</sprite>
         <sprite>sprites\spr_defence_tower_button</sprite>
       </sprites>
       <sprites name="Darterling Gun">
@@ -65,7 +61,6 @@
       <sprites name="Healer">
         <sprite>sprites\spr_healer_button</sprite>
         <sprite>sprites\spr_healer_big</sprite>
-        <sprite>sprites\spr_healer_tower</sprite>
       </sprites>
       <sprite>sprites\spr_floor</sprite>
       <sprite>sprites\spr_tower_damage</sprite>
