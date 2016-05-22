@@ -188,6 +188,9 @@ aim_y = y + lengthdir_y(len, dir);
     randomize();
     amounts = irandom(5);
     global.money += amounts;
+    console_check_command("[money_add=" + string(amounts) + "]");
+    
+    global.Score += 25;
     
     indicate(amounts, "+$");
     

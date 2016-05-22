@@ -39,7 +39,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x, y, obj_small_asteroid);
+            <string>
+instance_create(x, y, obj_small_asteroid);
 instance_create(x, y, obj_small_asteroid);
 instance_create(x, y, obj_small_asteroid);
 instance_create(x, y, obj_small_asteroid);
