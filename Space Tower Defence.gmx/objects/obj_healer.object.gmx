@@ -45,6 +45,8 @@ sellFor = sellFor1;
 upgradeCost = 20000;
 healths = choose(2) * sLevel;
 
+gui_list[5] = "Production: " + string(healths);
+
 alarm[0] = shootSpeed;
 </string>
           </argument>
@@ -68,16 +70,13 @@ alarm[0] = shootSpeed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.Health &lt; 200){
-global.Health += healths;
-indicate(healths, "+up");
-}else if(global.Health &gt; 200){
-    global.Health = 200;
-}
+            <string>console_check_command("[health_add=" + string(healths) + "]");
+indicate(healths, "+");
 
+healths = choose(1, 2) * sLevel;
+gui_list[5] = "Production: " + string(healths);
 
 alarm[0] = shootSpeed;
-healths = choose(2) * sLevel;
 
 
 
@@ -118,64 +117,6 @@ healths = choose(2) * sLevel;
           <argument>
             <kind>1</kind>
             <string>attack = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(global.selectedTower == id) {
-
-    // Draw buttons
-    depth = -1;    
-
-    // Draw stats box
-    var lineLength = 46;
-    var textPadding = 8;
-
-    // Draw stats
-    draw_set_font(fnt_gui_6);
-    draw_set_halign(fa_left);
-    draw_set_valign(fa_top);
-    draw_set_colour(c_white);
-    draw_text(x - 46, y - (42 + lineLength) + (textPadding * 4), "Production: up" + string(healths));
-    
-} else {
-    depth = 0;   
-}
-
-draw_set_defaults();
-
 </string>
           </argument>
         </arguments>

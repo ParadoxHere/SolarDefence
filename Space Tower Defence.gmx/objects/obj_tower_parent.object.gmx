@@ -40,7 +40,7 @@ button_object[2] = obj_tower_health;
 button_object[3] = obj_tower_upgrade;
 button_object_created = false;
 button_count = array_length_1d(button_object);
-button_section_size = 90 / button_count;
+button_section_size = 360 / button_count;
 
 for(var i = 0; i &lt; button_count; i++) {
     button[i] = noone;
@@ -57,6 +57,12 @@ sLevel = 1;
 attack = sLevel;
 
 bulletType = obj_bullet_parent;
+
+gui_list[0] = "HP: " + string(hp);
+gui_list[1] = "ATK: " + string(attack);
+gui_list[2] = "LVL: " + string(sLevel);
+gui_list[3] = "Sell For: $" + string(sellFor);
+gui_list[4] = "Upgrade Cost: $" + string(upgradeCost);
 </string>
           </argument>
         </arguments>
@@ -270,21 +276,6 @@ if(place_meeting(x, y + 32, obj_solid)) {
     // Draw buttons
     depth = -1;    
 
-    /*if(!instance_exists(obj_tower_drag)) {
-        dragButton = instance_create(x + xOffset, y - yOffset, obj_tower_drag);
-    }
-    
-    if(!instance_exists(obj_tower_sell)) {
-        sellButton = instance_create(x - xOffset, y - yOffset, obj_tower_sell);
-    }
-    
-    if(!instance_exists(obj_tower_health)) {
-        upButton = instance_create(x - xOffset, y + yOffset, obj_tower_health);
-    }
-    
-    if(!instance_exists(obj_tower_upgrade)) {
-        upgradeButton = instance_create(x + xOffset, y + yOffset, obj_tower_upgrade);
-    }*/
     
     for(var i = 0; i &lt; button_count; i++) {
         if(!instance_exists(button_object[i])) {
@@ -319,18 +310,16 @@ if(place_meeting(x, y + 32, obj_solid)) {
     draw_set_valign(fa_top);
     draw_set_colour(c_white);
     
-    var index = 0;
+    gui_list[0] = "HP: " + string(hp);
+    gui_list[1] = "ATK: " + string(attack);
+    gui_list[2] = "LVL: " + string(sLevel);
+    gui_list[3] = "Sell For: $" + string(sellFor);
+    gui_list[4] = "Upgrade Cost: $" + string(upgradeCost);
     
-    draw_text(x - 46, y - (42 + lineLength) + (textPadding * index), "HP: " + string(hp));
-    index++;
-    draw_text(x - 46, y - (42 + lineLength) + (textPadding * index), "ATK: " + string(attack));
-    index++;
-    draw_text(x - 46, y - (42 + lineLength) + (textPadding * index), "LVL: " + string(sLevel));
-    index++;
-    draw_text(x - 46, y - (42 + lineLength) + (textPadding * index), "Sell For: $" + string(sellFor));
-    index++;
-    draw_text(x - 46, y - (42 + lineLength) + (textPadding * index), "Upgrade Cost: $" + string(upgradeCost));
-    index++;
+    for(var i = 0; i &lt; array_length_1d(gui_list); i++) {
+        draw_text(x - 46, y - (42 + lineLength) + (textPadding * i), gui_list[i]);
+    }
+
     
 } else {
     depth = 0;   

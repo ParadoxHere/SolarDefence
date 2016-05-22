@@ -39,7 +39,7 @@ if(global.Health &gt; 0) {
             indicate(sellFor, "+$");
             
             // Add the money
-            global.money += sellFor;
+            console_check_command("[money_add=" + string(sellFor) + "]");
             
             // Sell/Destroy the tower
             instance_destroy();

@@ -37,14 +37,14 @@ if(global.Health &gt; 0) {
         with(global.selectedTower) {
             // If level is smaller than maxLevel
             if(level &lt; maxLevel) {
-                var cost = upgradeCost * level;
+                var cost = upgradeCost * sLevel;
                 if(global.money &gt; cost) {
                     level++;
                     sLevel++;
                     maxHp += 3;
                     var addHp = maxHp - hp;
                     hp += addHp;
-                    global.money -= cost;
+                    console_check_command("[money_take=" + string(cost) + "]");
                     indicate(cost, "-$");
                     global.selectedTower = noone;
                 }

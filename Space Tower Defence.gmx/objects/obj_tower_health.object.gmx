@@ -46,7 +46,7 @@ if(global.Health &gt; 0) {
                 
                 if(global.money &gt; cost) {
                     // Gets rid of the spent money
-                    global.money -= cost;
+                    console_check_command("[money_take=" + string(cost) + "]");
                     hp = maxHp;
                 }
                                 

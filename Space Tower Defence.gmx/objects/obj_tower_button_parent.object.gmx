@@ -95,7 +95,7 @@ if(!global.dragging) {
     // If you have enough money buy
     if(global.money &gt;= cost) { 
         // Takes away money
-        global.money -= cost;
+        console_check_command("[money_take=" + string(cost) + "]");
          
         // Indicates the lost money
         indicate(cost, "-$");
