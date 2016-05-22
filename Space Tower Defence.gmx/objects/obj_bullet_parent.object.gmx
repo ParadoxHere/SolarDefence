@@ -28,6 +28,7 @@
             <string>if(instance_exists(obj_enemy)) {
     xx = instance_nearest(x, y, obj_enemy);
     spd = 10;
+    
     move_towards_point(xx.aim_x, xx.aim_y, spd);
     image_angle = direction;
     findTarget = false;

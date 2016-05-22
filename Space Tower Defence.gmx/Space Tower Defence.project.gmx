@@ -5,9 +5,6 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sounds name="Splash">
-      <sound>sound\snd_splash</sound>
-    </sounds>
     <sound>sound\snd_explosion</sound>
     <sound>sound\snd_ambient</sound>
     <sound>sound\snd_button_press</sound>
