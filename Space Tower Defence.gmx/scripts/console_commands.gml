@@ -76,4 +76,14 @@ if(command_type == "health_set") {
     return 1;
 }
 
+if(command_type == "level_set") {
+    if(command_argument[0] == "moon") {
+        global.room_level = room_moon;
+    } else if(command_argument[0] == "mars") {
+        global.room_level = room_mars;
+    }
+    script_execute(global.room_level);
+    return 1;
+}
+
 return 0;

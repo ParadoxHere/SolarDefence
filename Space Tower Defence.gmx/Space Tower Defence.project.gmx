@@ -93,12 +93,13 @@
           <sprite>sprites\spr_vbar</sprite>
         </sprites>
       </sprites>
+      <sprites name="Level Select">
+        <sprite>sprites\spr_moon_level_select</sprite>
+        <sprite>sprites\spr_mars_level_select</sprite>
+      </sprites>
       <sprite>sprites\spr_effect_volume</sprite>
       <sprite>sprites\spr_ambient_volume</sprite>
       <sprite>sprites\spr_master_volume</sprite>
-      <sprites name="Level Select">
-        <sprite>sprites\spr_moon_level_select</sprite>
-      </sprites>
     </sprites>
     <sprites name="Space Ship">
       <sprite>sprites\spr_space_ship</sprite>
@@ -219,7 +220,7 @@
         </objects>
         <objects name="Level Select">
           <object>objects\obj_moon_select</object>
-          <object>objects\object71</object>
+          <object>objects\obj_mars_select</object>
         </objects>
         <object>objects\obj_moon_defence</object>
       </objects>

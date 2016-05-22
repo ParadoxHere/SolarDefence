@@ -20,7 +20,7 @@
   <width>128</width>
   <height>172</height>
   <frames>
-    <frame index="0">images\spr_moon_level_select_0.png</frame>
-    <frame index="1">images\spr_moon_level_select_1.png</frame>
+    <frame index="0">images\spr_mars_level_select_0.png</frame>
+    <frame index="1">images\spr_mars_level_select_1.png</frame>
   </frames>
 </sprite>
