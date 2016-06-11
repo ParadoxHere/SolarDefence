@@ -31,6 +31,7 @@ vspd = 0;
 hspd = 0;
 sellFor1 = 15;
 sellFor = sellFor1;
+baseUpgradeCost = 50;
 upgradeCost = 50;
 
 // Buttons
@@ -310,10 +311,15 @@ if(place_meeting(x, y + 32, obj_solid)) {
     gui_list[2] = "LVL: " + string(sLevel);
     gui_list[3] = "Sell For: $" + string(sellFor);
     gui_list[4] = "Upgrade Cost: $" + string(upgradeCost);
+    if(level &gt;= maxLevel) {
+        gui_list[4] = "";     
+    }
     
     gui_list_total = "";
     for(var i = 0; i &lt; array_length_1d(gui_list); i++) {
-       gui_list_total += gui_list[i] + "#";
+        if(gui_list[i] != "") {
+            gui_list_total += gui_list[i] + "#";
+        }
     }
     gui_list_height = string_height(gui_list_total);
     gui_list_width = string_width(gui_list_total);

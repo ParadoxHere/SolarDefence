@@ -276,12 +276,6 @@
           <object>objects\obj_defence_tower</object>
           <object>objects\obj_defence_button</object>
         </objects>
-        <objects name="Buttons">
-          <object>objects\obj_tower_drag</object>
-          <object>objects\obj_tower_sell</object>
-          <object>objects\obj_tower_health</object>
-          <object>objects\obj_tower_upgrade</object>
-        </objects>
         <objects name="Darterling Gun">
           <object>objects\obj_darterling_gun_tower</object>
           <object>objects\obj_darterling_bullet</object>
@@ -290,6 +284,12 @@
         <objects name="Healer">
           <object>objects\obj_healer</object>
           <object>objects\obj_healer_button</object>
+        </objects>
+        <objects name="Buttons">
+          <object>objects\obj_tower_drag</object>
+          <object>objects\obj_tower_sell</object>
+          <object>objects\obj_tower_health</object>
+          <object>objects\obj_tower_upgrade</object>
         </objects>
       </objects>
       <objects name="GUI">
