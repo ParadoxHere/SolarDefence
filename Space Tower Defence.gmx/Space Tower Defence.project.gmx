@@ -138,6 +138,7 @@
       <script>scripts\explode.gml</script>
       <script>scripts\fade.gml</script>
       <script>scripts\playRoom.gml</script>
+      <script>scripts\in_wave.gml</script>
     </scripts>
     <scripts name="Gamejolt API">
       <script>scripts\gj_datastore_keys_user.gml</script>

@@ -214,7 +214,7 @@ if(global.selectedTower == id) {
 
 // If not toching a solid
 if(drag &amp;&amp; global.dragging) {
-    if(!place_meeting(x, y, obj_solid)) {
+    if(!position_meeting(mouse_x, mouse_y, obj_solid) &amp;&amp; !place_meeting(x, y, obj_solid)) {
         // Place tower
         drag = false;
         global.dragging = false;  
@@ -310,7 +310,7 @@ if(place_meeting(x, y + 32, obj_solid)) {
     gui_list[1] = "ATK: " + string(attack);
     gui_list[2] = "LVL: " + string(sLevel);
     gui_list[3] = "Sell For: $" + string(sellFor);
-    gui_list[4] = "Upgrade Cost: $" + string(upgradeCost);
+    gui_list[4] = "Upgrade Cost: $" + string(upgradeCost); 
     if(level &gt;= maxLevel) {
         gui_list[4] = "";     
     }

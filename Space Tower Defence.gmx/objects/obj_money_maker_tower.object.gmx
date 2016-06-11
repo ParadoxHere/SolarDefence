@@ -70,15 +70,15 @@ alarm[0] = shootSpeed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>console_check_command("[money_add=" + string(amounts) + "]");
-indicate(amounts, "+$");
-
-amounts = choose(10, 15, 25) * sLevel;
-gui_list[5] = "Production: $" + string(amounts);
-
-alarm[0] = shootSpeed;
-
-
+            <string>if(in_wave()) {
+    console_check_command("[money_add=" + string(amounts) + "]");
+    indicate(amounts, "+$");
+    
+    amounts = choose(10, 15, 25) * sLevel;
+    gui_list[5] = "Production: $" + string(amounts);
+    
+    alarm[0] = shootSpeed;
+}
 </string>
           </argument>
         </arguments>
