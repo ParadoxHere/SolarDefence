@@ -3,7 +3,7 @@
   <spriteName>spr_tower1_button</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1000</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>obj_button_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -46,6 +46,8 @@ name = "Null";
 desc = "";
 
 cooldown = room_speed;
+
+cdepth = depth;
 </string>
           </argument>
         </arguments>
@@ -180,6 +182,12 @@ if(global.Health &gt; 0) {
         
     }
 }
+
+if(selected) {
+    depth = -id * 1000;
+} else {
+    depth = -1000;
+}
 </string>
           </argument>
         </arguments>
@@ -220,7 +228,6 @@ if(selected) {
     draw_text(x - (xx - padding), y - yy, "Name: " + name);
     draw_text(x - (xx - padding), y -  (yy - textPadding), "Cost: $" + string(cost));
     draw_text(x - (xx - padding), y -  (yy - (textPadding * 2)), desc);
-    
 }
 
 draw_self();
