@@ -45,6 +45,8 @@ selected = false;
 name = "Null";
 desc = "";
 
+padding = 3;
+
 cooldown = room_speed;
 
 cdepth = depth;
@@ -210,24 +212,44 @@ if(selected) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var xx = 240;
-var yy = (((sprite_height * 3) / 2) - 3);
-var padding = 3;
-var textPadding = 18;
-var lineEnd = 20;
-
-if(selected) {
-    draw_set_colour(c_white);
-    draw_line(x, y, x - lineEnd, y);
-    draw_set_colour(c_black);
-    draw_rectangle(x - xx, y - yy, x - lineEnd, y + yy, false);
-    draw_set_colour(c_white);
-    draw_rectangle(x - xx, y - yy, x - lineEnd, y + yy, true);
-    
+            <string>if(selected) {   
+    // Define stats
     draw_set_font(fnt_gui_12);
-    draw_text(x - (xx - padding), y - yy, "Name: " + name);
-    draw_text(x - (xx - padding), y -  (yy - textPadding), "Cost: $" + string(cost));
-    draw_text(x - (xx - padding), y -  (yy - (textPadding * 2)), desc);
+    
+    gui_list[0] = name;
+    gui_list[1] = "Cost: $" + string(cost);
+    gui_list[2] = desc;
+    
+    gui_list_total = "";
+    for(var i = 0; i &lt; array_length_1d(gui_list); i++) {
+        if(gui_list[i] != "") {
+            gui_list_total += gui_list[i] + "#";
+        }
+    }
+    gui_list_height = string_height(gui_list_total);
+    gui_list_width = string_width(gui_list_total);
+    
+    // Draw stats box
+    var lineLength = 20;
+    
+    var xx = x - gui_list_width - lineLength;
+    var yy = y - gui_list_height / 2;
+    var xx2 = x - lineLength
+    var yy2 = y + gui_list_height / 2;
+    
+    draw_set_colour(c_white);
+    draw_line(x, y, x - lineLength, y);
+    draw_set_colour(c_black);
+    draw_rectangle(xx - padding, yy - padding, xx2 + padding, yy2 + padding, false);
+    draw_set_colour(c_white);
+    draw_rectangle(xx - padding, yy - padding, xx2 + padding, yy2 + padding, true);
+     
+     // Draw stats   
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
+    draw_set_colour(c_white);
+    
+    draw_text(xx, yy, gui_list_total);
 }
 
 draw_self();
