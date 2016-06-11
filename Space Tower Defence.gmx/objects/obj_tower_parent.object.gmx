@@ -63,6 +63,17 @@ gui_list[1] = "ATK: " + string(attack);
 gui_list[2] = "LVL: " + string(sLevel);
 gui_list[3] = "Sell For: $" + string(sellFor);
 gui_list[4] = "Upgrade Cost: $" + string(upgradeCost);
+gui_list_total = "";
+for(var i = 0; i &lt; array_length_1d(gui_list); i++) {
+   gui_list_total += gui_list[i] + "#";
+}
+gui_list_height = string_height(gui_list_total);
+gui_list_width = string_width(gui_list_total);
+padding = 3;
+
+
+
+
 </string>
           </argument>
         </arguments>
@@ -276,7 +287,6 @@ if(place_meeting(x, y + 32, obj_solid)) {
     // Draw buttons
     depth = -1;    
 
-    
     for(var i = 0; i &lt; button_count; i++) {
         if(!instance_exists(button_object[i])) {
             var offset = 64;
@@ -292,23 +302,8 @@ if(place_meeting(x, y + 32, obj_solid)) {
         }
     }
     
-    // Draw stats box
-    var lineLength = 80;
-    var textPadding = 8;
-    
-    draw_set_colour(c_white);
-    draw_line(x, y, x, y - lineLength);
-    draw_set_colour(c_black);
-    draw_rectangle(x - 48, y - (43 + lineLength), x + 45, y - lineLength, false);
-    draw_set_colour(c_white);
-    draw_rectangle(x - 48, y - (43 + lineLength), x + 45, y - lineLength, true);
-    
-    
-    // Draw stats
+    // Define stats
     draw_set_font(fnt_gui_6);
-    draw_set_halign(fa_left);
-    draw_set_valign(fa_top);
-    draw_set_colour(c_white);
     
     gui_list[0] = "HP: " + string(hp);
     gui_list[1] = "ATK: " + string(attack);
@@ -316,9 +311,37 @@ if(place_meeting(x, y + 32, obj_solid)) {
     gui_list[3] = "Sell For: $" + string(sellFor);
     gui_list[4] = "Upgrade Cost: $" + string(upgradeCost);
     
+    gui_list_total = "";
     for(var i = 0; i &lt; array_length_1d(gui_list); i++) {
-        draw_text(x - 46, y - (42 + lineLength) + (textPadding * i), gui_list[i]);
+       gui_list_total += gui_list[i] + "#";
     }
+    gui_list_height = string_height(gui_list_total);
+    gui_list_width = string_width(gui_list_total);
+
+    
+    // Draw stats box
+    var lineLength = 80;
+    var textPadding = 8;
+    
+    var xx = x - (gui_list_width / 2);
+    var yy = y - (lineLength + gui_list_height);
+    var xx2 = x + (gui_list_width / 2);
+    var yy2 = y - lineLength;
+    var area = gui_list_height * gui_list_width;
+    
+    draw_set_colour(c_white);
+    draw_line(x, y, x, y - lineLength);
+    draw_set_colour(c_black);
+    draw_rectangle(xx - padding, yy - padding, xx2 + padding, yy2 + padding, false);
+    draw_set_colour(c_white);
+   draw_rectangle(xx - padding, yy - padding, xx2 + padding, yy2 + padding, true);
+    
+    // Draw stats   
+    draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
+    draw_set_colour(c_white);
+    
+    draw_text(xx, yy, gui_list_total);
 
     
 } else {
@@ -328,16 +351,9 @@ if(place_meeting(x, y + 32, obj_solid)) {
 draw_set_defaults();
 
 // Draws self and damage
-
-
 image_index = level;
 
-
-if(!drag) {
-    draw_sprite(sprite_index, image_index, x, y);
-} else {
-    draw_self();
-}
+draw_self();
 
 var index = 0;
 
