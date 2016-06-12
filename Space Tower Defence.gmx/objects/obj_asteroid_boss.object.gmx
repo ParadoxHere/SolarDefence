@@ -42,7 +42,8 @@
             <string>instance_create(x, y, obj_bossbattle_manager);
 spd = .25;
 global.bossStarted = false;
-maxHp = 200 * (global.wave / 5) * global.difficulty;
+baseHp = 500;
+maxHp = baseHp * (global.wave / 5) * global.difficulty;
 hp = maxHp;
 global.bossHealth = get_percent(hp, maxHp);
 </string>
