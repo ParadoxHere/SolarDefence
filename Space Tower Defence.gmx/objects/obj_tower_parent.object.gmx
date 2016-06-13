@@ -33,6 +33,7 @@ sellFor1 = 15;
 sellFor = sellFor1;
 baseUpgradeCost = 50;
 upgradeCost = 50;
+edge_padding = 5;
 
 // Buttons
 button_object[0] = obj_tower_drag;
@@ -293,6 +294,8 @@ if(place_meeting(x, y + 32, obj_solid)) {
             var offset = 64;
             var xx = x + lengthdir_x(offset, button_section_size * i);
             var yy = y + lengthdir_y(offset, button_section_size * i);
+            xx = clamp(xx, sprite_get_width(spr_tower_move) / 2 + edge_padding, room_width - (sprite_get_width(spr_tower_move) / 2) - edge_padding);
+            
             button[i] = instance_create(xx, yy, button_object[i]);
             
         }
@@ -335,12 +338,22 @@ if(place_meeting(x, y + 32, obj_solid)) {
     var yy2 = y - lineLength;
     var area = gui_list_height * gui_list_width;
     
+    while(xx &lt; edge_padding) {
+        xx++;
+        xx2++;
+    }
+    
+    while(xx2 &gt; room_width - edge_padding) {
+        xx--;
+        xx2--;
+    }
+    
     draw_set_colour(c_white);
     draw_line(x, y, x, y - lineLength);
     draw_set_colour(c_black);
     draw_rectangle(xx - padding, yy - padding, xx2 + padding, yy2 + padding, false);
     draw_set_colour(c_white);
-   draw_rectangle(xx - padding, yy - padding, xx2 + padding, yy2 + padding, true);
+    draw_rectangle(xx - padding, yy - padding, xx2 + padding, yy2 + padding, true);
     
     // Draw stats   
     draw_set_halign(fa_left);

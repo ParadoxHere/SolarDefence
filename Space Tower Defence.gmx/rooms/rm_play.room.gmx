@@ -71,7 +71,7 @@ script_execute(global.room_level);
     <instance objName="obj_healer_button" x="576" y="32" name="inst_56DDD9CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_debug" x="96" y="0" name="inst_CDE218B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_money_maker_button" x="544" y="32" name="inst_7C2FA52E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_floor" x="0" y="416" name="inst_E9AE5FE9" locked="0" code="" scaleX="20" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_floor" x="-32" y="416" name="inst_E9AE5FE9" locked="0" code="" scaleX="22" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
