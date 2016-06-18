@@ -42,10 +42,13 @@
             <string>bulletType = obj_follow_proj_bullet;
 sellFor1 = 180;
 sellFor = sellFor1;
+unlock = 0;
 
 attack = sLevel * 2;
 
 upgradeCost = 200;
+
+
 </string>
           </argument>
         </arguments>

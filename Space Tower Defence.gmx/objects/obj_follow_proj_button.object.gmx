@@ -41,8 +41,10 @@
             <kind>1</kind>
             <string>type = obj_follow_proj_tower;
 cost = 200;
+unlock = 0;
 name = "Target Finder";
 desc = "Never misses.";
+waveUnlock = 5;
 </string>
           </argument>
         </arguments>

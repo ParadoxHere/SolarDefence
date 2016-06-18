@@ -76,6 +76,7 @@
       <sprite>sprites\spr_explosion</sprite>
       <sprite>sprites\spr_moon_defence</sprite>
       <sprite>sprites\spr_tutorial</sprite>
+      <sprite>sprites\spr_cursor</sprite>
     </sprites>
     <sprites name="Menu">
       <sprites name="Slider">
@@ -341,6 +342,7 @@
       <objects name="Debug">
         <object>objects\obj_debug</object>
       </objects>
+      <object>objects\obj_cursor</object>
     </objects>
   </objects>
   <rooms name="rooms">

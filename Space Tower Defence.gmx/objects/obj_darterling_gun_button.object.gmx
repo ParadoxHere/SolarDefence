@@ -43,6 +43,7 @@
 cost = 250;
 name = "Dartling Gun";
 desc = "Rapid fire.";
+waveUnlock = 10;
 </string>
           </argument>
         </arguments>

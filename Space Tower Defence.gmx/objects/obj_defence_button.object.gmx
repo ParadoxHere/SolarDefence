@@ -40,9 +40,10 @@
           <argument>
             <kind>1</kind>
             <string>name = "Barrier";
-cost = 50;
+cost = 300;
 type = obj_defence_tower;
 desc = "Pure defence.";
+waveUnlock = 15;
 </string>
           </argument>
         </arguments>

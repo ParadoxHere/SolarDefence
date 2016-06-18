@@ -43,6 +43,7 @@
 cost = 450;
 name = "Money Maker";
 desc = "Creates money.";
+waveUnlock = 20;
 </string>
           </argument>
         </arguments>

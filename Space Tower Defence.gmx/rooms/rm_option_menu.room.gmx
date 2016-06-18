@@ -60,6 +60,7 @@
     <instance objName="obj_master_volume" x="48" y="144" name="inst_903189F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hbar_mv" x="320" y="196" name="inst_6DB0E964" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hbar" x="320" y="292" name="inst_97866777" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cursor" x="304" y="224" name="inst_AA5E863A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

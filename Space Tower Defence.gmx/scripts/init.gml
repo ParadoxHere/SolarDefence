@@ -11,6 +11,7 @@ global.startwave = false;
 global.selectedTower = noone;
 global.dragging = false;
 
+
 /*
     3 - Hard
     2 - Medium

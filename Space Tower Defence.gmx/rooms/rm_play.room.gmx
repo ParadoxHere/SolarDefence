@@ -58,11 +58,11 @@ script_execute(global.room_level);
   </views>
   <instances>
     <instance objName="obj_game_gui" x="0" y="0" name="inst_4766BB67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_follow_proj_button" x="512" y="32" name="inst_42E7CA22" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_follow_proj_button" x="448" y="32" name="inst_42E7CA22" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_asteroid_controll" x="32" y="0" name="inst_D6D209D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_gameover_manager" x="64" y="0" name="inst_28908CC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_standard_button" x="416" y="32" name="inst_72E4B30C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_defence_button" x="448" y="32" name="inst_68C29A7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_defence_button" x="512" y="32" name="inst_68C29A7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_start_wave" x="64" y="448" name="inst_E1770303" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="608" y="448" name="inst_0FEB1EB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_darterling_gun_button" x="480" y="32" name="inst_094203AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -72,6 +72,7 @@ script_execute(global.room_level);
     <instance objName="obj_debug" x="96" y="0" name="inst_CDE218B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_money_maker_button" x="544" y="32" name="inst_7C2FA52E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="-32" y="416" name="inst_E9AE5FE9" locked="0" code="" scaleX="22" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cursor" x="320" y="224" name="inst_E8138907" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

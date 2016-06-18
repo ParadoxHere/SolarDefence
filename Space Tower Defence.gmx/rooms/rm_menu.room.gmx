@@ -57,6 +57,7 @@
     <instance objName="obj_exit" x="80" y="320" name="inst_03AF2CE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_moon_defence" x="320" y="64" name="inst_FF3728A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_asteroid_controll" x="0" y="0" name="inst_1B0EEFF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cursor" x="320" y="256" name="inst_3E141346" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

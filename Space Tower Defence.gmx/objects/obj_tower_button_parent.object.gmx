@@ -44,12 +44,15 @@ cost = 25;
 selected = false;
 name = "Null";
 desc = "";
+waveUnlock = 0;
 
 padding = 3;
 
 cooldown = room_speed;
 
 cdepth = depth;
+
+
 </string>
           </argument>
         </arguments>
@@ -96,8 +99,8 @@ cdepth = depth;
             <kind>1</kind>
             <string>// if not dragging anything
 if(!global.dragging) {
-    // If you have enough money buy
-    if(global.money &gt;= cost) { 
+    // If you have enough money buy and level is correct
+    if(global.money &gt;= cost &amp;&amp; waveUnlock &lt;= global.wave) { 
         // Takes away money
         console_check_command("[money_take=" + string(cost) + "]");
          
@@ -190,6 +193,7 @@ if(selected) {
 } else {
     depth = -1000;
 }
+
 </string>
           </argument>
         </arguments>
@@ -218,7 +222,8 @@ if(selected) {
     
     gui_list[0] = name;
     gui_list[1] = "Cost: $" + string(cost);
-    gui_list[2] = desc;
+    gui_list[2] = "Unlock on wave: " + string(waveUnlock);
+    gui_list[3] = desc;
     
     gui_list_total = "";
     for(var i = 0; i &lt; array_length_1d(gui_list); i++) {
@@ -250,6 +255,10 @@ if(selected) {
     draw_set_colour(c_white);
     
     draw_text(xx, yy, gui_list_total);
+    
+    //Misc
+    
+    
 }
 
 draw_self();
