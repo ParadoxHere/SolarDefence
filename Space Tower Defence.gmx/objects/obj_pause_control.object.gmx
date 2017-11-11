@@ -25,26 +25,27 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>screen_save("pause.png");
+            <string>//screen_save("pause.png");
 
 instance_deactivate_all(true);
 instance_activate_object(obj_pause);
-background_hspeed[0] = 0;
+instance_activate_object(obj_cursor);
+//background_hspeed[0] = 0;
 
-bg = sprite_add("pause.png", 0, false, true, 0, 0);
+//bg = sprite_add("pause.png", 0, false, true, 0, 0);
 
 // Create pause gui
 instance_create(room_width / 2, 64, obj_moon_defence);
 instance_create(room_width / 2, room_height - 32, obj_menu);
 
-instance_create(48, 144, obj_master_volume);
+/*instance_create(48, 144, obj_master_volume);
 instance_create(320, 196, obj_hbar_mv);
 
 instance_create(48, 332, obj_effect_volume);
 instance_create(320, 388, obj_hbar_ev);
 
 instance_create(48, 240, obj_ambient_volume);
-instance_create(320, 293, obj_hbar);
+instance_create(320, 293, obj_hbar);*/
 
 </string>
           </argument>
@@ -68,7 +69,7 @@ instance_create(320, 293, obj_hbar);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(bg, 0, 0, 0);
+            <string>//draw_sprite(bg, 0, 0, 0);
 draw_set_alpha(.6);
 draw_rectangle(-5, -5, display_get_gui_width() + 5, display_get_gui_height() + 5, false);
 draw_set_defaults();

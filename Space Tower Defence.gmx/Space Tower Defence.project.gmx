@@ -96,6 +96,7 @@
       <sprite>sprites\spr_effect_volume</sprite>
       <sprite>sprites\spr_ambient_volume</sprite>
       <sprite>sprites\spr_master_volume</sprite>
+      <sprite>sprites\spr_earth_bg</sprite>
     </sprites>
     <sprites name="Space Ship">
       <sprite>sprites\spr_space_ship</sprite>
@@ -111,7 +112,6 @@
     </backgrounds>
     <background>background\bg_moon_floor</background>
     <background>background\bg_space</background>
-    <background>background\bg_overlay</background>
     <background>background\bg_moon</background>
   </backgrounds>
   <paths name="paths"/>
@@ -253,6 +253,8 @@
         <object>objects\obj_ambient_volume</object>
       </objects>
       <object>objects\obj_tutorial</object>
+      <object>objects\obj_earth_bg</object>
+      <object>objects\obj_roomSelection</object>
     </objects>
     <objects name="Gameplay">
       <objects name="Tower">
@@ -352,11 +354,9 @@
     </rooms>
     <rooms name="Menu">
       <room>rooms\rm_menu</room>
-      <room>rooms\rm_option_menu</room>
     </rooms>
     <rooms name="Play">
       <room>rooms\rm_play</room>
-      <room>rooms\rm_choose_room</room>
       <room>rooms\rm_choose_level</room>
     </rooms>
   </rooms>

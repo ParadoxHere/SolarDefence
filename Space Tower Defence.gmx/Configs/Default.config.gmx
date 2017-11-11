@@ -226,7 +226,7 @@
     <option_freeze>false</option_freeze>
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
-    <option_fullscreen>False</option_fullscreen>
+    <option_fullscreen>True</option_fullscreen>
     <option_gameguid>{31030D68-4AE7-4AB1-844E-C8DA3E315F0C}</option_gameguid>
     <option_gameid>546879374</option_gameid>
     <option_haptic_effects>0</option_haptic_effects>
@@ -637,7 +637,7 @@
     <option_xbone_ratings>"&lt;mx:Ratings Category=""game""&gt;","&lt;!-- Insert your title ratings here --&gt;","&lt;!-- See ""Title Ratings for Xbox One"" white paper --&gt;","&lt;!-- from developer.xboxlive.com for details --&gt;",&lt;/mx:Ratings&gt;</option_xbone_ratings>
     <option_xbone_require_audio_recording>False</option_xbone_require_audio_recording>
     <option_xbone_require_game_chat>False</option_xbone_require_game_chat>
-    <option_xbone_require_xbox_live>True</option_xbone_require_xbox_live>
+    <option_xbone_require_xbox_live>0</option_xbone_require_xbox_live>
     <option_xbone_revision_version>0</option_xbone_revision_version>
     <option_xbone_scale>-1</option_xbone_scale>
     <option_xbone_service_config_id></option_xbone_service_config_id>

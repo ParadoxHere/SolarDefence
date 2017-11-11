@@ -25,12 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(playRoom()) {
+            <string>rate=60 / ((global.difficulty+1) * (global.wave + 1));
+if(playRoom()) {
     global.wave = 0;
     wantedWaveAsteroids = global.wave * 2 * global.difficulty;
     waveAsteroids = 0;
     
-    spawnRate = random_range(room_speed, room_speed * 3) / global.difficulty;
+    //spawnRate = random_range(room_speed, room_speed * 3) / rate;
+    spawnRate =  rate;
     waitNextWave = 120;
     
     global.startwave = true;
@@ -102,7 +104,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spawnRate = random_range(60, 60 * 3) / global.difficulty;
+            <string>rate=180 / ((global.difficulty+1) * ((global.wave*2)/8));
+if(rate &lt; 1){
+    rate = 1;
+}
+spawnRate = rate;
 if(playRoom()) {
     if(waveAsteroids &lt; wantedWaveAsteroids) {
         waveAsteroids++;
@@ -119,6 +125,9 @@ if(playRoom()) {
 } else {
     instance_create(random(room_width), -16, choose(obj_asteroid, obj_asteroid, obj_asteroid, obj_asteroid, obj_space_ship));
     alarm[0] = spawnRate;
+}
+if(alarm[0] = -1){
+    alarm[0]=spawnRate;
 }
 
 </string>

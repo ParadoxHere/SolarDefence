@@ -97,6 +97,9 @@ if(keyboard_check_pressed(vk_enter)) {
             <string>var width = display_get_gui_width();
 var height = display_get_gui_height();
 
+x=100;
+y=100;
+
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 
