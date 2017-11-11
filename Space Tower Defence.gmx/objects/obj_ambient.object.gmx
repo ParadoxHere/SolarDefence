@@ -26,13 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>if(room != rm_splash) {
-    if(!audio_is_playing(snd_ambient)) {
-        global.ambient = audio_play_sound(snd_ambient, 100, true);
+    if(!audio_is_playing(snd_ambient0)) {
+        global.ambient = audio_play_sound(snd_ambient0, 100, true);
     } else {
         audio_sound_gain(global.ambient, global.ambientVolume, 0);
     }
 } else {
-    audio_stop_sound(snd_ambient);
+    audio_stop_sound(snd_ambient0);
 }
 
 </string>

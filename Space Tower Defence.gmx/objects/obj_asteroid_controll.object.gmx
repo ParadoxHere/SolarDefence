@@ -68,16 +68,12 @@ if(playRoom()) {
     wantedWaveAsteroids = global.wave * 5 * global.difficulty;
     waveAsteroids = 0;
     
-    if (global.wave mod 5 = 0) {
-        if(global.wave == 15) {
-            gj_trophy_add("34040");
+    if (global.wave mod 5 = 0 ) {
+        if(global.wave mod 10 = 0){
+            instance_create(random_range(128,room_width-128), -256, choose(obj_spaceShip_boss));
+        }else{
+            instance_create(random_range(128,room_width-128), -256, choose(obj_asteroid_boss));
         }
-        
-        if(global.wave == 50) {
-            gj_trophy_add("34041");
-        }
-        
-        instance_create(320, -256, choose(obj_asteroid_boss))
     }
     
     alarm[0] = spawnRate;

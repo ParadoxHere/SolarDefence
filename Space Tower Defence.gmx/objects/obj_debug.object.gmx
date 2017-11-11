@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>txt = "";
-console_height = 20;
+console_height = 20*2;
 show = false;
 </string>
           </argument>
@@ -94,22 +94,21 @@ if(keyboard_check_pressed(vk_enter)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var width = display_get_gui_width();
-var height = display_get_gui_height();
+            <string>//var width = display_get_gui_width();
+//var height = display_get_gui_height();
 
-x=100;
-y=100;
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 
 if(show) {
     draw_set_colour(c_white);
-    draw_set_font(fnt_gui_6);
-    draw_text(8, height - (console_height / 2), "&gt; " + txt);
+    draw_set_font(fnt_gui_12);
+    draw_text(8, room_height - (console_height / 2), "&gt; " + txt);
     draw_set_colour(c_black);
     draw_set_alpha(.3);
-    draw_rectangle(0, height, width, height - console_height, false);
+    //draw_rectangle(0, height, width, height - console_height, false);
+    draw_rectangle(0, room_height, room_width, room_height-console_height, false);
 }
 
 draw_set_defaults();

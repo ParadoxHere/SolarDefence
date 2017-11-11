@@ -6,7 +6,7 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_explosion</sound>
-    <sound>sound\snd_ambient</sound>
+    <sound>sound\snd_ambient0</sound>
     <sound>sound\snd_button_press</sound>
     <sound>sound\snd_button_hover</sound>
     <sound>sound\snd_button_deny</sound>
@@ -100,6 +100,8 @@
     </sprites>
     <sprites name="Space Ship">
       <sprite>sprites\spr_space_ship</sprite>
+      <sprite>sprites\spr_space_ship_boss</sprite>
+      <sprite>sprites\spr_spaceShip_boss_bullet</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -329,6 +331,8 @@
         <objects name="Boss">
           <object>objects\obj_boss</object>
           <object>objects\obj_asteroid_boss</object>
+          <object>objects\obj_spaceShip_boss</object>
+          <object>objects\obj_spaceShip_boss_bullet</object>
         </objects>
         <objects name="Asteroid">
           <object>objects\obj_asteroid_parent</object>
@@ -366,6 +370,7 @@
   <audiogroups name="audiogroups">
     <audiogroup name="audiogroup_default"/>
     <audiogroup name="ag_effects"/>
+    <audiogroup name="ag_music"/>
   </audiogroups>
   <TutorialState>
     <IsTutorial>0</IsTutorial>
