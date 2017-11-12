@@ -86,4 +86,14 @@ if(command_type == "level_set") {
     return 1;
 }
 
+if(command_type == "debug"){
+    if(command_argument[0] == "true"){
+        global.wave = 100;
+        global.money = 10000000000;
+    }else if(command_argument[0] == "false"){
+        global.wave = 0;
+        global.money = 100;
+    }
+}
+
 return 0;

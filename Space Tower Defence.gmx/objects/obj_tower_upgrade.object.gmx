@@ -28,7 +28,6 @@
             <string>/// Makes tower
 pressed = button_press();
 hover = button_hover();
-
 // If health is greater than 0
 if(global.Health &gt; 0) {  
     // If button is being pressed
@@ -36,14 +35,20 @@ if(global.Health &gt; 0) {
         // Inside the selected tower
         with(global.selectedTower) {
             // If level is smaller than maxLevel
+            sUpgradeCost = upgradeCost * sLevel
             if(level &lt; maxLevel) {
-                var cost = upgradeCost;
+                var cost = sUpgradeCost;
                 if(global.money &gt;= cost) {
                     level++;
                     sLevel++;
-                    upgradeCost = baseUpgradeCost * sLevel
-                    maxHp += 3;
-                    var addHp = maxHp - hp;
+                    sUpgradeCost = upgradeCost * sLevel
+                    if(global.selectedTowerType == "obj_defence_tower"){
+                        maxHp+=6;
+                        var addHp = maxHp - hp;
+                    }else{
+                        maxHp += 3;
+                        var addHp = maxHp - hp;
+                    }
                     hp += addHp;
                     console_check_command("[money_take=" + string(cost) + "]");
                     indicate(cost, "-$");

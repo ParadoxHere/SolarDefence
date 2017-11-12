@@ -25,15 +25,36 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(room != rm_splash) {
-    if(!audio_is_playing(snd_ambient0)) {
-        global.ambient = audio_play_sound(snd_ambient0, 100, true);
+            <string>song = irandom_range(0, 2);
+if(room != rm_splash) {
+    if(global.bossStarted){
+        //audio_stop_sound(snd_ambient0 &amp;&amp; snd_ambient1 &amp;&amp; snd_ambient2 &amp;&amp; snd_ambient3);
+        //global.ambient = audio_play_sound(snd_bossBattle0, 100, true);
+    }else{
+    //audio_stop_sound(snd_bossBattle0);
+    song = irandom_range(0, 3);
+    if(!audio_is_playing(snd_ambient0) &amp;&amp; !audio_is_playing(snd_ambient1) &amp;&amp; !audio_is_playing(snd_ambient2) &amp;&amp; !audio_is_playing(snd_ambient3)) {
+        if(song == 0){
+            global.ambient = audio_play_sound(snd_ambient0, 100, false);
+            show_debug_message("song0");
+        }else if(song == 1){
+            global.ambient = audio_play_sound(snd_ambient1, 100, false);
+            show_debug_message("song1");
+        }else if(song == 2){
+            global.ambient = audio_play_sound(snd_ambient2, 100, false);
+            show_debug_message("song2");
+        }else if(song == 3){
+            global.ambient = audio_play_sound(snd_ambient3, 100, false);
+            show_debug_message("song3");
+        }
     } else {
         audio_sound_gain(global.ambient, global.ambientVolume, 0);
     }
+    }
 } else {
-    audio_stop_sound(snd_ambient0);
+    audio_stop_sound(snd_ambient0 &amp;&amp; snd_ambient1 &amp;&amp; snd_ambient2 &amp;&amp; snd_ambient3 &amp;&amp; snd_bossBattle0);
 }
+
 
 </string>
           </argument>

@@ -10,6 +10,10 @@
     <sound>sound\snd_button_press</sound>
     <sound>sound\snd_button_hover</sound>
     <sound>sound\snd_button_deny</sound>
+    <sound>sound\snd_ambient1</sound>
+    <sound>sound\snd_ambient2</sound>
+    <sound>sound\snd_ambient3</sound>
+    <sound>sound\snd_bossBattle0</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Splash">
@@ -190,6 +194,9 @@
       <script>scripts\console_commands.gml</script>
     </scripts>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\shader0.shader</shader>
+  </shaders>
   <fonts name="fonts">
     <fonts name="GUI Font">
       <font>fonts\fnt_gui_6</font>

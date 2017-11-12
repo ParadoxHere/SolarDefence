@@ -55,7 +55,6 @@ hp = maxHp;
 maxLevel = 2;
 level = 0;
 sLevel = 1;
-
 attack = sLevel;
 
 bulletType = obj_bullet_parent;
@@ -65,6 +64,7 @@ gui_list[1] = "ATK: " + string(attack);
 gui_list[2] = "LVL: " + string(sLevel);
 gui_list[3] = "Sell For: $" + string(sellFor);
 gui_list[4] = "Upgrade Cost: $" + string(upgradeCost);
+
 gui_list_total = "";
 for(var i = 0; i &lt; array_length_1d(gui_list); i++) {
    gui_list_total += gui_list[i] + "#";
@@ -262,6 +262,8 @@ if(place_meeting(x, y + 32, obj_solid)) {
         if(global.selectedTower == noone) {
             // Selected me
             global.selectedTower = id;
+            global.selectedTowerType = object_get_name(object_index);
+            show_debug_message(global.selectedTowerType);
         }
     }
 }

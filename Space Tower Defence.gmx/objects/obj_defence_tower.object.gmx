@@ -42,6 +42,8 @@
             <string>sellFor1 = 40;
 sellFor = sellFor1;
 upgradeCost = 75;
+maxHp = 6;
+hp=maxHp;
 </string>
           </argument>
         </arguments>
