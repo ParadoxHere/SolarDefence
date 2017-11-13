@@ -1,5 +1,5 @@
 # SolarDefence
-No description for this game yet
+This branch is a rebuild of the game
 
 ## Build Release Schedule
 The build release schedule is released in, weeklys(Sundays), monthlys(31) and Offical Release
